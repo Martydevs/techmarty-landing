@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .navbar-link {
+    @apply text-primary-700 hover:text-primary-900 transition-colors;
+  }
+
+  .navbar-button-link {
+    @apply bg-accent-500 text-white px-4 py-2 rounded-md hover:bg-accent-600 transition-colors;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
