@@ -11,14 +11,14 @@ export default function Hero({ title, subtitle, isHome }: HeroProps) {
         <h1 className="font-display text-5xl font-bold text-primary-900 dark:text-primary-100 mb-6 text-pretty">
           {title}
         </h1>
-        <p className="text-xl text-secondary-700 mb-8 text-secondary-500 dark:text-secondary-300 text-pretty">
+        <p className="text-xl mb-8 text-secondary-500 dark:text-secondary-300 text-pretty">
           {subtitle}
         </p>
         {isHome ? (
           <div className="flex flex-col gap-4 w-full justify-center md:flex-row md:gap-6 lg:gap-8">
             <a
               href="#"
-              className="bg-primary-600 text-white px-6 py-3 rounded-md hover:bg-primary-700 transition-colors"
+              className="bg-accent-500 text-white px-6 py-3 rounded-md hover:bg-primary-700 transition-colors"
             >
               Empezar Ahora
             </a>

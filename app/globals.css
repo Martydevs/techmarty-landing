@@ -4,11 +4,15 @@
 
 @layer components {
   .navbar-link {
-    @apply text-primary-700 hover:text-primary-900 transition-colors;
+    @apply text-primary-200 hover:underline transition-colors;
   }
 
   .navbar-button-link {
-    @apply bg-accent-500 text-white px-4 py-2 rounded-md hover:bg-accent-600 transition-colors;
+    @apply bg-secondary-500 text-white px-4 py-2 rounded-md hover:bg-secondary-600 transition-colors;
+  }
+
+  .footer-link {
+    @apply mx-4 text-sm text-accent-200 transition-colors duration-300 hover:text-accent-400 dark:text-gray-300 dark:hover:text-accent-400;
   }
 }
 

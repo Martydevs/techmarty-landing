@@ -1,3 +1,4 @@
+import Footer from "../ui/footer";
 import Navbar from "../ui/navbar";
 
 export default function BaseLayout({
@@ -11,6 +12,7 @@ export default function BaseLayout({
       <main className="w-full min-h-screen mx-auto container">
         {children}
       </main>
+      <Footer />
     </>
   );
 }
