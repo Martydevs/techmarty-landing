@@ -56,7 +56,11 @@ export default {
         sans: ['var(--font-opensans)', 'system-ui', 'sans-serif'],
         display: ['var(--font-inter)', 'system-ui', 'sans-serif'],
         mono: ['var(--font-robotomono)', 'monospace'],
-      }
+      } ,
+      container: {
+        padding: '2rem',
+        center: true
+      },
     },
   },
   plugins: [],

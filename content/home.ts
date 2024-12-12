@@ -1,4 +1,4 @@
-import { CardContent } from "@/interfaces/home";
+import type { CardContent, ServiceCard } from "@/interfaces/home";
 
 import Building from "@/app/assets/static/building-tech.webp";
 import Delivery from "@/app/assets/static/delivery-tech.webp";
@@ -25,4 +25,22 @@ const cardContent: CardContent[] = [
   },
 ];
 
-export { cardContent };
+const servicios: ServiceCard[] = [
+  {
+    title: "Plan Hardware",
+    subtitle: "Servicio de mantenimiento correctivo y preventivo para tu PC o laptop.",
+    price: 500,
+  },
+  {
+    title: "Plan Software",
+    subtitle: "Servicio de instalación, optimización y reparación de software para tu PC o laptop.",
+    price: 600,
+  },
+  {
+    title: "Plan ármalo",
+    subtitle: "Servicio de cotización y armado de Workstations y PC gamers a tu medida",
+    price: 0,
+  }
+]
+
+export { cardContent, servicios };

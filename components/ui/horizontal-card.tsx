@@ -15,19 +15,18 @@ export default function HorizontalCard({
 }: HorizontalCardProps) {
   return (
     <section
-      className={`w-full max-w-[70%] h-auto bg-zinc-900 rounded-md shadow-xl flex items-center gap-8 p-6 hover:scale-105 transition-all ${
-        direction === "left" ? "flex-row" : "flex-row-reverse"
-      }`}
+      className={`w-full h-auto bg-zinc-900 rounded-md shadow-xl flex items-center gap-8 p-4 hover:scale-105 transition-all md:flex-row md:gap-12 md:p-6 lg:gap-12 lg:p-8 xl:gap-16 xl:p-12 
+        ${direction === "left" ? "flex-col" : "flex-col-reverse md:flex-row-reverse"}`}
     >
-      <div className={`flex flex-col justify-between`}>
-        <h1 className={`font-display text-2xl md:text-3xl lg:text-4xl font-bold text-primary-900 dark:text-primary-100 mb-6 text-balance ${direction === "left" ? "text-start" : "text-end"}`}>
+      <div className={`flex flex-col justify-between md:w-1/2`}>
+        <h1 className={`font-display text-2xl md:text-3xl lg:text-4xl font-bold text-primary-900 dark:text-primary-100 mb-6 md:mb-8 lg:mb-10 xl:mb-12 ${direction === "left" ? "text-start" : "text-end"}`}>
           {title}
         </h1>
-        <p className={`text-md md:text-lg lg:text-xl text-secondary-700 dark:text-secondary-300 text-pretty ${direction === "left" ? "text-start" : "text-end"}`}>
+        <p className={`text-md md:text-lg lg:text-xl text-secondary-700 dark:text-secondary-300 text-pretty md:text-start ${direction === "left" ? "md:text-start" : "md:text-end"}`}>
           {subtitle}
         </p>
       </div>
-      <div className={"w-1/2 h-full flex items-center justify-center"}>
+      <div className={`w-full md:w-1/2 h-full flex items-center justify-center md:order-first ${direction === "left" ? "order-last" : "order-first"}`}>
         <Image
           src={image}
           alt={title}

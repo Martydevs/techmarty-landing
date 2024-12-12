@@ -53,7 +53,6 @@ const FollowCursor: React.FC<FollowCursorProps> = () => {
 
     const init = () => {
       if (prefersReducedMotion.matches) {
-        console.log("Reduced motion enabled, cursor effect skipped.");
         return;
       }
 
