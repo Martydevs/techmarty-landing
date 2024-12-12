@@ -4,6 +4,7 @@ import { ThemeProvider } from "next-themes";
 import { Inter, Open_Sans, Roboto_Mono } from "next/font/google";
 
 import Navbar from "@/components/ui/navbar";
+import Footer from "@/components/ui/footer";
 import FollowCursor from "@/components/ui/follow-cursor";
 
 import "./globals.css";
@@ -48,6 +49,7 @@ export default function RootLayout({
           <main className="w-full min-h-screen mx-auto container">
             {children}
           </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
