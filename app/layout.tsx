@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Inter, Open_Sans, Roboto_Mono } from "next/font/google";
 
-import BaseLayout from "@/components/layouts/base-layout";
+import Navbar from "@/components/ui/navbar";
+import FollowCursor from "@/components/ui/follow-cursor";
 
 import "./globals.css";
 
@@ -42,7 +43,11 @@ export default function RootLayout({
           attribute="class"
           disableTransitionOnChange
         >
-          <BaseLayout>{children}</BaseLayout>
+          <Navbar />
+          <FollowCursor />
+          <main className="w-full min-h-screen mx-auto container">
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>

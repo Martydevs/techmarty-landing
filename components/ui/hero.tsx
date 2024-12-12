@@ -11,7 +11,7 @@ export default function Hero({ title, subtitle, isHome }: HeroProps) {
         <h1 className="font-display text-5xl font-bold text-primary-900 dark:text-primary-100 mb-6 text-pretty">
           {title}
         </h1>
-        <p className="text-xl text-secondary-700 mb-8 text-secondary-500 dark:text-secondary-300 text-pretty">
+        <p className="text-xl mb-8 text-secondary-500 dark:text-secondary-300 text-pretty">
           {subtitle}
         </p>
         {isHome ? (
