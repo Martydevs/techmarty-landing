@@ -7,11 +7,11 @@ export default function Home() {
     <>
       <Hero
         isHome
-        title="Servicio experto en reparación y mantenimiento de PCs"
+        title="Tu compu también merece chagneada"
         subtitle="Reparación y mantenimiento de computadoras para mantener tus sistemas funcionando al máximo rendimiento."
       />
 
-      <section className="h-[75dvh] w-full flex flex-col items-center space-y-8">
+      <section className="h-auto w-full flex flex-col items-center space-y-8">
         {cardContent.map((card, index) => (
           <HorizontalCard
             key={index}
@@ -21,6 +21,10 @@ export default function Home() {
             image={card.image}
           />
         ))}
+      </section>
+
+      <section className="h-[75dvh] w-full">
+        <p>Content</p>
       </section>
     </>
   );
