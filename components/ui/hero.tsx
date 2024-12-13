@@ -15,18 +15,12 @@ export default function Hero({ title, subtitle, isHome }: HeroProps) {
           {subtitle}
         </p>
         {isHome ? (
-          <div className="flex flex-col gap-4 w-full justify-center md:flex-row md:gap-6 lg:gap-8">
+          <div className="flex items-center justify-center">
             <a
               href="#"
               className="bg-accent-500 text-white px-6 py-3 rounded-md hover:bg-primary-700 transition-colors"
             >
-              Empezar Ahora
-            </a>
-            <a
-              href="#"
-              className="bg-secondary-500 text-white px-6 py-3 rounded-md hover:bg-secondary-600 transition-colors"
-            >
-              Saber más
+              Ver servicios
             </a>
           </div>
         ) : null}

@@ -46,7 +46,7 @@ export default function RootLayout({
         >
           <Navbar />
           <FollowCursor />
-          <main className="w-full min-h-dvh container">
+          <main className="w-full min-h-screen container">
             {children}
           </main>
           <Footer />

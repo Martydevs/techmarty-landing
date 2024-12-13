@@ -14,6 +14,10 @@
   .footer-link {
     @apply mx-4 text-sm text-accent-200 transition-colors duration-300 hover:text-accent-400 dark:text-gray-300 dark:hover:text-accent-400;
   }
+  
+  .schedule-hour-tag {
+    @apply font-semibold text-accent-300 bg-black rounded-lg px-2 py-1;
+  }
 }
 
 :root {
