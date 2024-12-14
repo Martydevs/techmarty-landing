@@ -25,8 +25,7 @@ const robotoMono = Roboto_Mono({
 
 export const metadata: Metadata = {
   title: "TechMarty - Servicio Técnico de Computadoras",
-  description:
-    "Servicio profesional de reparación y mantenimiento de computadoras",
+  description: "Servicio profesional de reparación y mantenimiento de computadoras",
 };
 
 export default function RootLayout({
@@ -40,8 +39,8 @@ export default function RootLayout({
         className={`${inter.className} ${openSans.className} ${robotoMono.className} bg-primary-50 dark:bg-primary-950 antialiased`}
       >
         <ThemeProvider
-          defaultTheme="dark"
           attribute="class"
+          defaultTheme="dark"
           disableTransitionOnChange
         >
           <Navbar />

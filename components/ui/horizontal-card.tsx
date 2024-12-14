@@ -1,4 +1,5 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
+import type { StaticImageData } from "next/image";
 
 interface HorizontalCardProps {
   direction: "left" | "right";
@@ -15,7 +16,7 @@ export default function HorizontalCard({
 }: HorizontalCardProps) {
   return (
     <section
-      className={`w-full h-auto bg-zinc-900 rounded-md shadow-xl flex items-center gap-8 p-4 hover:scale-105 transition-all md:flex-row md:gap-12 md:p-6 lg:gap-12 lg:p-8 xl:gap-16 xl:p-12 
+      className={`w-full h-auto bg-zinc-900 rounded-md shadow-xl flex items-center gap-8 p-4 md:flex-row md:gap-12 md:p-6 lg:gap-12 lg:p-8 xl:gap-16 xl:p-12 
         ${direction === "left" ? "flex-col" : "flex-col-reverse md:flex-row-reverse"}`}
     >
       <div className={`flex flex-col justify-between md:w-1/2`}>
@@ -28,6 +29,7 @@ export default function HorizontalCard({
       </div>
       <div className={`w-full md:w-1/2 h-full flex items-center justify-center md:order-first ${direction === "left" ? "order-last" : "order-first"}`}>
         <Image
+          priority
           src={image}
           alt={title}
           width={300}

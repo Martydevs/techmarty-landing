@@ -1,10 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { pageRoutes } from "@/content/routing";
+import { usePathname } from "next/navigation";
+import { isCurrentRouteActive } from "@/lib/routing";
 
 export default function Navbar() {
+  const path = usePathname();
   const headerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -30,15 +33,20 @@ export default function Navbar() {
           <h1>Techmarty</h1>
         </span>
         <nav className="flex items-center gap-6">
-          {pageRoutes.map((route, index) => (
-            <Link
+          {pageRoutes.map((route, index) => {
+            const isLastItem = index === pageRoutes.length - 1;
+            const isActive = isCurrentRouteActive(route.href, path);
+            
+            return (
+              <Link
               key={route.href}
               href={route.href}
-              className={`navbar-link ${index === pageRoutes.length - 1 ? "navbar-button-link" : ""}`}
+              className={`navbar-link ${isLastItem && "navbar-button-link"} ${isActive && "navbar-link-active"}`}
             >
               {route.text}
             </Link>
-          ))}
+            )
+          })}
         </nav>
       </div>
     </header>

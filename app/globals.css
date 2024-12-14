@@ -7,16 +7,32 @@
     @apply text-primary-200 hover:underline transition-colors;
   }
 
+  .navbar-link-active {
+    @apply underline transition-colors;
+  }
+
   .navbar-button-link {
     @apply bg-secondary-500 text-white px-4 py-2 rounded-md hover:bg-secondary-600 transition-colors;
+  }
+
+  .navbar-button-link-active {
+    @apply bg-secondary-600 text-white px-4 py-2 rounded-md hover:bg-secondary-700 transition-colors;
   }
 
   .footer-link {
     @apply mx-4 text-sm text-accent-200 transition-colors duration-300 hover:text-accent-400 dark:text-gray-300 dark:hover:text-accent-400;
   }
-  
+
   .schedule-hour-tag {
     @apply font-semibold text-accent-300 bg-black rounded-lg px-2 py-1;
+  }
+
+  .card-hover {
+    @apply transition-all hover:scale-105 hover:shadow-2xl hover:bg-accent-300 hover:dark:bg-zinc-800;
+  }
+
+  .shimmer-button {
+    @apply active:scale-100 hover:scale-105;
   }
 }
 
@@ -41,4 +57,11 @@ body {
 .blur-background {
   backdrop-filter: blur(1rem);
   background-color: rgba(39, 39, 42, 0.5);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
 }

@@ -10,7 +10,7 @@ interface FollowCursorProps {
 
 const FollowCursor: React.FC<FollowCursorProps> = () => {
   const { theme } = useTheme();
-  const cursorColor = theme === "dark" ? "#47ba82" : "#1f7d51";
+  const cursorColor = theme === "dark" ? "#fff" : "#000";
 
   useEffect(() => {
     let canvas: HTMLCanvasElement;

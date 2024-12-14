@@ -14,7 +14,7 @@ export default function ServiceCard({
   const precio = price !== 0 ? formatPrice(price) : "Cotizar";
 
   return (
-    <div className="w-full h-auto flex flex-col justify-between items-center p-8 space-y-8 text-center border border-gray-200 rounded-lg dark:border-gray-700">
+    <div className="card-hover w-full h-auto flex flex-col justify-between items-center p-8 space-y-8 text-center border border-gray-200 rounded-lg dark:border-gray-700">
       <p className="font-medium text-gray-500 uppercase dark:text-gray-300">
         {title}
       </p>
