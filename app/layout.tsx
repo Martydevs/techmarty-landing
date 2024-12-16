@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
-
-import { ThemeProvider } from "next-themes";
 import { Inter, Open_Sans, Roboto_Mono } from "next/font/google";
 
-import Navbar from "@/components/ui/navbar";
-import Footer from "@/components/ui/footer";
-import FollowCursor from "@/components/ui/follow-cursor";
+import Providers from "./providers";
+import BaseLayout from "@/components/layouts/base-layout";
 
 import "./globals.css";
 
@@ -36,20 +33,11 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body
-        className={`${inter.className} ${openSans.className} ${robotoMono.className} bg-primary-50 dark:bg-primary-950 antialiased`}
+        className={`${inter.className} ${openSans.className} ${robotoMono.className} antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          disableTransitionOnChange
-        >
-          <Navbar />
-          <FollowCursor />
-          <main className="w-full min-h-screen container">
-            {children}
-          </main>
-          <Footer />
-        </ThemeProvider>
+        <Providers>
+          <BaseLayout>{children}</BaseLayout>
+        </Providers>
       </body>
     </html>
   );

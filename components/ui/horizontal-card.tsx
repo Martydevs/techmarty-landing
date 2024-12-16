@@ -1,11 +1,8 @@
 import Image from "next/image";
-import type { StaticImageData } from "next/image";
+import { CardContent } from "@/interfaces/home";
 
-interface HorizontalCardProps {
+interface HorizontalCardProps extends CardContent {
   direction: "left" | "right";
-  title: string;
-  subtitle: string;
-  image: string | StaticImageData;
 }
 
 export default function HorizontalCard({
@@ -20,10 +17,10 @@ export default function HorizontalCard({
         ${direction === "left" ? "flex-col" : "flex-col-reverse md:flex-row-reverse"}`}
     >
       <div className={`flex flex-col justify-between md:w-1/2`}>
-        <h1 className={`font-display text-2xl md:text-3xl lg:text-4xl font-bold text-primary-900 dark:text-primary-100 mb-6 md:mb-8 lg:mb-10 xl:mb-12 ${direction === "left" ? "text-start" : "text-end"}`}>
+        <h1 className={`font-display text-2xl md:text-3xl lg:text-4xl font-bold text-primary-100 mb-6 md:mb-8 lg:mb-10 xl:mb-12 ${direction === "left" ? "text-start" : "text-end"}`}>
           {title}
         </h1>
-        <p className={`text-md md:text-lg lg:text-xl text-secondary-700 dark:text-secondary-300 text-pretty md:text-start ${direction === "left" ? "md:text-start" : "md:text-end"}`}>
+        <p className={`text-md md:text-lg lg:text-xl text-secondary-300 text-pretty md:text-start ${direction === "left" ? "md:text-start" : "md:text-end"}`}>
           {subtitle}
         </p>
       </div>

@@ -10,10 +10,6 @@ const pageRoutes: PageRoutes[] = [
     text: "Servicios",
   },
   {
-    href: "/nosotros",
-    text: "Nosotros",
-  },
-  {
     href: "/contacto",
     text: "Contacto",
   },

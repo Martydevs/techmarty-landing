@@ -1,8 +1,7 @@
-"use client";
-
-import React, { useEffect } from "react";
-import Dot from "@/lib/dot";
+import { useEffect } from "react";
 import { useTheme } from "next-themes";
+
+import Dot from "@/lib/dot";
 
 interface FollowCursorProps {
   color?: string;
@@ -23,7 +22,7 @@ const FollowCursor: React.FC<FollowCursorProps> = () => {
       "(prefers-reduced-motion: reduce)"
     );
 
-    const dot = new Dot(width / 2, height / 2, 25, 10, cursorColor, 0.5);
+    const dot = new Dot(width / 2, height / 2, 15, 10, cursorColor, 0.5);
 
     const onMouseMove = (e: MouseEvent) => {
       cursor.x = e.clientX;

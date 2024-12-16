@@ -8,7 +8,7 @@ export default function ServicesContainer({
   return (
     <>
       <div className="flex flex-col items-center justify-center">
-        <ToolsIcon size={58} />
+        <ToolsIcon className="size-12" />
         <h2 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
           Servicios
         </h2>

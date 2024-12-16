@@ -7,6 +7,7 @@ export interface CardContent {
 }
 
 export interface ServiceCard {
+  linkTo: "hardware" | "software" | "armado";
   title: string;
   price: number;
   subtitle: string;

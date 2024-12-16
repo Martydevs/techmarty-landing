@@ -23,7 +23,7 @@ export default class Dot {
       this.position.y,
       this.width,
       0,
-      2 * Math.PI
+      2 * 3.1416
     );
     context.globalAlpha = this.opacity;
     context.fill();
