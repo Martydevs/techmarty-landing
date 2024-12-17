@@ -1,5 +1,7 @@
-import Hero from "@/components/ui/hero";
 import { cardContent, servicios } from "@/content/home";
+
+import Hero from "@/components/ui/hero";
+import BaseLayout from "@/components/layouts/base-layout";
 import HorizontalCard from "@/components/ui/horizontal-card";
 import ServiceCard from "@/components/ui/service/service-card";
 import HorariosServicios from "@/components/ui/horarios-servicios";
@@ -7,7 +9,7 @@ import ServicesContainer from "@/components/ui/service/service-container";
 
 export default function Home() {
   return (
-    <>
+    <BaseLayout>
       <Hero
         isHome
         title="profesional de computadoras"
@@ -46,6 +48,6 @@ export default function Home() {
       <section className="h-auto w-full py-10">
         <HorariosServicios />
       </section>
-    </>
+    </BaseLayout>
   );
 }

@@ -1,10 +1,12 @@
-import Hero from "@/components/ui/hero";
-import VerticalCard from "@/components/ui/vertical-card";
 import { serviceDetails } from "@/content/services";
+
+import Hero from "@/components/ui/hero";
+import BaseLayout from "@/components/layouts/base-layout";
+import VerticalCard from "@/components/ui/vertical-card";
 
 export default function Servicios() {
   return (
-    <>
+    <BaseLayout>
       <Hero
         title="Servicios"
         subtitle="Nuestros servicios de reparación y mantenimiento de PCs"
@@ -14,7 +16,9 @@ export default function Servicios() {
         {serviceDetails.map((detail, i) => (
           <VerticalCard key={i}>
             <header className="h-2/5">
-              <h2 className="text-4xl text-balance font-extrabold">{detail.title}</h2>
+              <h2 className="text-4xl text-balance font-extrabold">
+                {detail.title}
+              </h2>
               <p className="mt-4 text-pretty">{detail.description}</p>
             </header>
 
@@ -26,6 +30,6 @@ export default function Servicios() {
           </VerticalCard>
         ))}
       </section>
-    </>
+    </BaseLayout>
   );
 }

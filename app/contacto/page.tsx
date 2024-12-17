@@ -1,12 +1,10 @@
 import Hero from "@/components/ui/hero";
+import BaseLayout from "@/components/layouts/base-layout";
 
 export default function Contacto() {
   return (
-    <>
-      <Hero
-        title="Contacto"
-        subtitle="¡Estamos para ayudarte!"
-      />
-    </>
-  )
+    <BaseLayout>
+      <Hero title="Contacto" subtitle="¡Estamos para ayudarte!" />
+    </BaseLayout>
+  );
 }

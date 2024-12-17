@@ -20,7 +20,7 @@ export default function Hero({ title, subtitle, isHome }: HeroProps) {
 
   return (
     <section className="w-full h-auto py-20 bg-transparent">
-      <div className="max-w-4xl mx-auto text-center px-4 md:px-0 sm:px-2 transition-all duration-[1500ms]">
+      <div className="max-w-4xl mx-auto text-center px-4 md:px-0 sm:px-2 transition-all duration-1000">
         <h1 className="font-display text-5xl font-bold text-primary-900 dark:text-primary-100 mb-6 text-balance">
           {isHome && <DynamicFlipWords words={services} />}
           {title}
